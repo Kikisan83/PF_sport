@@ -1,0 +1,215 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f4f7f6;
+    font-family: arial;
+    margin: 0;
+}
+
+header{
+    background-color: #1d1d1d;
+    text-align: center;
+    color:white;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+header img{
+    padding-top: 1rem;
+}
+
+.separator{
+    width : 60px;
+    height: 2px;
+    margin : 15px auto;
+    display: block;
+    background-color: #999999;
+
+}
+
+h2{
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* before et after mettent un contenu
+avant et/ou après chaque h3
+*/
+h3:before{
+    content:"« ";
+    color:#999999
+
+}
+
+h3:after{
+    content:" »";
+    color:#999999
+
+}
+
+section{
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+/* text transform pour gérer la casse*/
+h3{
+    text-transform: uppercase;
+}
+
+h2, h3{
+    font-size: 1.5rem;
+
+}
+
+nav{
+    background-color: white;
+    box-shadow: 0px 3px 1px -1px rgba(0, 0, 0, 0.5);
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 15px;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    display: inline;
+
+}
+
+
+/*  pour mettre les elements d'une liste sur une ligne
+display : inline */
+li{
+    list-style-type: none;
+    display: inline;
+    margin: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    font-weight: bold;
+}
+
+footer{
+    background-color: #1d1d1d;
+    text-align: center;
+    color:white;
+    padding: 15px;
+    
+}
+
+.contact{
+    border: 1px black solid;
+    border-radius: 15px;
+    margin: 10px;
+    margin-bottom: 50px;
+    padding: 30px;
+
+}
+
+.contener{
+    width: 80%;
+    margin: 0 auto;
+
+
+}
+
+#projets{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+
+}
+
+
+.projet{
+    width: 430px;
+    margin: 30px;
+    background-color: white;
+    padding-bottom: 15px;
+    border: 0px;
+    border-radius: 15px;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    /* overflow cache les angles sup des images qui debordent
+    du cadre arrondi */
+    overflow: hidden;
+
+
+}
+
+.projet:hover{
+    box-shadow: 0px 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: 0.3s;
+
+}
+
+.projet img{
+    min-width: 430px;
+    height: 266px;
+
+}
+
+.picture{
+    width: 430px;
+    height: 266;
+    overflow: hidden;
+    margin-bottom: 15px;
+
+}
+
+.projet span{
+    text-transform: uppercase;
+    display: block;
+}
+
+.date_projet{
+    color: black;
+    font-size: 0.7em;
+    text-transform: none;
+}
+
+
+.picture_in_project img{
+    width: 70%;
+    
+}
+
+.picture_in_project img, iframe, video{
+    margin:0 auto;
+    padding: 10px 0px;
+    width:80%;
+    max-width: 560px;
+    display:block;
+}
+
+.sound{
+    border: 1px black solid;
+    border-radius: 15px;
+    background-color: #acacac;
+    width:312px;
+    margin : 10px auto;
+    padding: 8px 5px 5px 5px;
+}
+
+
+/* MEDIA */
+@media all and (max-width:1000px){
+    .projet{width:100%; }
+    .projet img{width: 100%;min-width: auto; height:auto; }
+    .projet .picture{width: 100%;height: auto;}
+    header h2{width:90%}
+
+}
